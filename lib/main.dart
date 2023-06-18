@@ -7,10 +7,16 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  final Counter _counter = Counter();
+class MyApp extends StatefulWidget {
 
   MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final Counter _counter = Counter();
 
   // This widget is the root of your application.
   @override
@@ -32,6 +38,12 @@ class MyApp extends StatelessWidget {
         ),
       },
     );
+  }
+
+  @override
+  void dispose() {
+    _counter.dispose();
+    super.dispose();
   }
 }
 
