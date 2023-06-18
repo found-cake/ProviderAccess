@@ -62,7 +62,7 @@ class MyHomePage extends StatelessWidget{
                 "Show Me Counter",
                 style: TextStyle(fontSize: 20),
               ),
-              onPressed: () => Navigator.pushNamed(context, 'counter')
+              onPressed: () => Navigator.pushNamed(context, '/counter')
             ),
             SizedBox(height: 20,),
             ElevatedButton(
